@@ -8,8 +8,13 @@ export const AppRoutes = () => {
 
     const PrivateRouter = ( {children} ) => {
 
-        const  { authenticated } = useContext(AuthContext);
+        const  { authenticated, loading } = useContext(AuthContext);
 
+        if(loading){
+            return(
+                <div className="loading">Loading...</div>
+            )
+        }
         if(!authenticated){
             return(
                 <Navigate to={"/login"} />
