@@ -1,7 +1,8 @@
+import { LoginPage } from "./LoginPage";
 
 function App() {
   return (
-    <h1>App</h1>
+    <LoginPage />
   );
 }
 
