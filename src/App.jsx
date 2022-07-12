@@ -1,8 +1,8 @@
-import { LoginPage } from "./LoginPage";
+import { AppRoutes } from "./AppRoutes";
 
 function App() {
   return (
-    <LoginPage />
+    <AppRoutes />
   );
 }
 

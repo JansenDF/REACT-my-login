@@ -1,8 +1,11 @@
-import React, {useState} from 'react'
+import React, { useState, useContext } from 'react'
 
+import { AuthContext } from '../../context/auth'
 import './style.css'
 
 export const LoginPage = () => {
+
+    const { authenticated, login } = useContext(AuthContext)
 
     const [ email, setEmail ] = useState("")
     const [ password, setPassword ] = useState("")
@@ -11,11 +14,13 @@ export const LoginPage = () => {
         e.preventDefault();
 
         console.log('submit', email, password)
+        login(email, password)
     }
     return (
         <div id="login">
             <h1 className="title">Login</h1>
-            <form action="" className="form">
+            <p>{String(authenticated)}</p>
+            <form className="form">
                 <div className="field">
                     <label htmlFor="email">Email</label>
                     <input type="email" name="email" id="email" value={email} onChange={(e) => setEmail(e.currentTarget.value)}/>
