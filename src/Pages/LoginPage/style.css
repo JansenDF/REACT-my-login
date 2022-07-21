@@ -1,3 +1,9 @@
+
+
+:root {
+    --baseColor: #048000
+}
+
 #login {
     display: flex;
     flex-direction: column;
@@ -5,10 +11,11 @@
     justify-content: center;
     min-height: 100vh;
     padding: 0 2rem;
+    background-color: var(--baseColor);
 }
 
 #login .form {
-    background-color: #f1f1f1;
+    background-color: var(--baseColor);
     width: 100%;
     max-width: 480px;
     padding: 0.5rem;
@@ -23,10 +30,13 @@
 }
 
 #login .field input {
+    height: 2.5rem;
     width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
 }
 
-#login #actions {
+#login .actions {
     text-align: center;
     margin-top: 1rem;
 }

@@ -1,0 +1,32 @@
+
+
+:root {
+    --baseColor: #048000
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--baseColor);
+    height: 5rem;
+    align-items: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.menu ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    padding-right: 2rem;
+}
+
+.menu ul li {
+    list-style: none;
+    margin-right: 3rem;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+}

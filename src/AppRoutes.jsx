@@ -1,7 +1,8 @@
-import React, { useState, useContext } from 'react'
-import { BrowserRouter, Routes, Route, PrivateRouter, Navigate } from 'react-router-dom';
-import { LoginPage } from './Pages/LoginPage';
+import React, { useContext } from 'react'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { HomePage } from './Pages/HomePage';
+import { LoginPage } from './Pages/LoginPage';
+import { Dashboard } from './Pages/Dashboard';
 import { AuthProvider, AuthContext } from './context/auth';
 
 export const AppRoutes = () => {
@@ -17,7 +18,7 @@ export const AppRoutes = () => {
         }
         if(!authenticated){
             return(
-                <Navigate to={"/login"} />
+                <Navigate to={"/"} />
             )
         }
         return children;
@@ -27,8 +28,9 @@ export const AppRoutes = () => {
         <BrowserRouter>
             <AuthProvider>
                 <Routes>
+                    <Route exact path='/' element={<HomePage />} />
                     <Route exact path='/login' element={<LoginPage />} />
-                    <Route exact path='/' element={<PrivateRouter><HomePage /></PrivateRouter>} />
+                    <Route exact path='/dashboard' element={<PrivateRouter><Dashboard /></PrivateRouter>} />
                 </Routes>
             </AuthProvider>
         </BrowserRouter>

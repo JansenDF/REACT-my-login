@@ -1,0 +1,46 @@
+
+:root {
+    --baseColor: #048000
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#home .signin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 100vh;
+    background-color: var(--baseColor);
+}
+#home .container {
+    
+}
+
+#home .signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    height: 100vh;
+}
+
+#home .formSignup div{
+    margin-bottom: 1rem;
+}
+
+#home .formSignup input {
+    padding: 0.5rem;
+}
+
+#home .button {
+    background-color: var(--baseColor);
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
